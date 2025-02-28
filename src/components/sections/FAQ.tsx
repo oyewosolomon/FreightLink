@@ -73,13 +73,13 @@ const FAQs: FC = () => {
   return (
     <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 px-3 md:grid-cols-2">
           <div>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Frequently Asked Questions
             </h2>
-            <p className="mt-4 text-xl text-gray-600">
+            <p className="mt-4 text-xl px-5 text-gray-600">
               Get answers to the most common questions about our platform
             </p>
           </div>
