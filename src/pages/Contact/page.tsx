@@ -3,7 +3,6 @@ import Features from "@/components/sections/WhyChooseUs";
 import Analytics from "@/components/sections/Analytics";
 import Success from "@/components/sections/Success";
 import Team from "@/components/sections/Team";
-import Contact from "@/components/sections/Contact";
 import Pricing from "@/components/sections/Pricing";
 import Partners from "@/components/sections/Partners";
 import FAQ from "@/components/sections/FAQ";
@@ -19,19 +18,10 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FeaturesSection from "@/components/sections/Features";
 import FAQs from "@/components/sections/FAQ";
 
-export default function Home() {
+export default function Contact() {
   return (
     <main>
-      <Hero />
-      <WhyChooseUs/>
-      <HowItWorksSection/>
-      <FeaturesSection/>
-      <FAQs/>  
-      {/* <Success/> */}
-      <Testimonials/>
-      <Team />
-      <Contact />
-      <Footer/>
+
     </main>
   );
 }

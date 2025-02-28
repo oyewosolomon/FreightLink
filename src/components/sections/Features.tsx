@@ -17,7 +17,7 @@ const FeaturesSection = () => {
         "Compliance monitoring",
         "International trade advisors"
       ],
-      image: "https://source.unsplash.com/random/600x400?shipping,global",
+      image: "/images/shipping.webp",
       color: "from-blue-500 to-indigo-600"
     },
     {
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
         "Real-time availability",
         "Instant quote comparison"
       ],
-      image: "https://source.unsplash.com/random/600x400?trucks,logistics",
+      image: "/images/shipping.webp",
       color: "from-indigo-500 to-purple-600"
     },
     {
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
         "Compliance with FDA/EU regulations",
         "Excursion alerts and reporting"
       ],
-      image: "https://source.unsplash.com/random/600x400?refrigerated,container",
+      image: "/images/shipping.webp",
       color: "from-teal-500 to-green-600"
     },
     {
@@ -56,7 +56,7 @@ const FeaturesSection = () => {
         "Custom reporting and analytics",
         "Predictive ETA technology"
       ],
-      image: "https://source.unsplash.com/random/600x400?technology,dashboard",
+      image: "/images/shipping.webp",
       color: "from-purple-500 to-pink-600"
     }
   ];

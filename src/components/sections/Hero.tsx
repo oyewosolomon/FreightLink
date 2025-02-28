@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight, Globe, ShieldCheck, Truck } from 'lucide-react';
+import Navbar from '../layout/Navbar';
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gradient-to-r from-blue-900 to-indigo-800 overflow-hidden">
+    <div className="relative dark:bg-gray-900">
+      {/* <Navbar/> */}
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1000/1000')] bg-center bg-repeat-space opacity-10"></div>

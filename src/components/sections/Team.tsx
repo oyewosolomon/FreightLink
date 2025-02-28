@@ -1,84 +1,80 @@
-import { motion } from "framer-motion";
-import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import React from 'react';
+import { Twitter, Instagram } from 'lucide-react';
 
-export default function TeamSection() {
+const TeamSection = () => {
   const teamMembers = [
     {
-      name: "John Doe",
-      role: "CEO",
-      imageUrl: "/path/to/image.jpg",
-      description: "John is the visionary behind our company, leading with passion and dedication.",
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#"
-      }
+      name: 'Nikita Xing',
+      role: 'HR Manager',
+      image: '/images/team-3.jpg'
     },
     {
-      name: "Jane Smith",
-      role: "CTO",
-      imageUrl: "/path/to/image.jpg",
-      description: "Jane is the tech guru, ensuring our solutions are cutting-edge and efficient.",
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#"
-      }
+      name: 'Leslie Alexander',
+      role: 'CO-Founder',
+     image: '/images/team-1.jpg'
     },
     {
-      name: "Mark Johnson",
-      role: "COO",
-      imageUrl: "/path/to/image.jpg",
-      description: "Mark keeps the operations smooth and customers satisfied.",
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#"
-      }
+      name: 'Wade Warren',
+      role: 'UI Designer',
+      image: '/images/team-2.jpg'
+    },
+    {
+      name: 'Guy Hawkins',
+      role: 'Product Designer',
+      image: '/images/team-4.jpg'
+    },
+    {
+      name: 'Ronald Richards',
+      role: 'Customer Support',
+      image: '/images/team-5.jpg'
     }
   ];
 
   return (
-    <section id="team" className="py-24 bg-muted/50 dark:bg-gray-800">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Our dedicated team of professionals working to bring the best solutions.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
-            >
-              <div className="overflow-hidden rounded-full w-32 h-32 mx-auto mb-4">
-                <img src={`https://randomuser.me/api/portraits/men/${index + 1}.jpg`} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold dark:text-white">{member.name}</h3>
-              <p className="text-muted-foreground dark:text-gray-400">{member.role}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{member.description}</p>
-              <div className="flex justify-center space-x-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <a href={member.socials.linkedin} className="text-blue-600 hover:text-blue-800"><FaLinkedin size={20} /></a>
-                <a href={member.socials.twitter} className="text-blue-400 hover:text-blue-600"><FaTwitter size={20} /></a>
-                <a href={member.socials.facebook} className="text-blue-700 hover:text-blue-900"><FaFacebook size={20} /></a>
-              </div>
-            </motion.div>
-          ))}
+    <div className='bg-white dark:bg-gray-900'>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Introduction Card */}
+        <div className="rounded-lg bg-indigo-600 p-8 text-white flex flex-col justify-between">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Our fantastic team</h2>
+            <p className="mb-8">These people work on making our product best.</p>
+          </div>
+          <button className="bg-white text-indigo-600 rounded-full py-2 px-6 font-medium w-fit hover:bg-gray-100 transition-colors">
+            Join the team
+          </button>
         </div>
+
+        {/* Team Member Cards */}
+        {teamMembers.map((member, index) => (
+          <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4 flex justify-between items-center">
+              <div>
+                <h3 className="font-medium text-lg text-gray-900">{member.name}</h3>
+                <p className="text-gray-500">{member.role}</p>
+              </div>
+              <div className="flex space-x-2">
+                <a href="#" className="text-gray-500 hover:text-gray-700">
+                  <Twitter size={20} />
+                </a>
+                <a href="#" className="text-gray-500 hover:text-gray-700">
+                  <Instagram size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
+    </div>
   );
-}
+};
+
+export default TeamSection;

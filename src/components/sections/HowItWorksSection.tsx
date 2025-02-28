@@ -100,7 +100,7 @@ const HowItWorksSection = () => {
               </div>
               <div className="w-full md:w-1/2 relative">
                 <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden m-4 md:m-12 shadow-lg relative">
-                  <img src="/api/placeholder/640/360" alt="Platform demo preview" className="w-full h-full object-cover opacity-70" />
+                  <img src="/images/shipping.webp" alt="Platform demo preview" className="w-full h-full object-cover opacity-70" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

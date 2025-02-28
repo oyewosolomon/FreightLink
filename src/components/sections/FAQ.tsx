@@ -1,5 +1,8 @@
 import React, { useState, FC } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Play } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Card } from '../ui/card';
+import { Button } from "@/components/ui/button";
 
 interface FAQItemProps {
   question: string;
@@ -68,35 +71,90 @@ const FAQs: FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Get answers to the most common questions about our platform
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="divide-y divide-gray-200">
-            {faqs.map((faq, index) => (
-              <FAQItem key={index} question={faq.question} answer={faq.answer} />
-            ))}
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-xl text-gray-600">
+              Get answers to the most common questions about our platform
+            </p>
           </div>
-        </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-base text-gray-600">
-            Still have questions?{' '}
-            <a
-              href="#contact"
-              className="font-medium text-indigo-600 hover:text-indigo-500"
-            >
-              Contact our support team
-            </a>
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="divide-y divide-gray-200">
+              {faqs.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-base text-gray-600">
+              Still have questions?{' '}
+              <a
+                href="#contact"
+                className="font-medium text-indigo-600 hover:text-indigo-500"
+              >
+                Contact our support team
+              </a>
+            </p>
+          </div>
+          </div>
+         
+
+          <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold mb-4">
+            Experience RoboTech Solutions in Action
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Discover how our collaborative robots enhance productivity, precision, and efficiency in industrial automation.
           </p>
+        </motion.div>
+
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="overflow-hidden">
+              <div className="relative aspect-video bg-muted">
+                {/* Replace src with the actual demo video URL */}
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VIDEO_ID?si=YOUR_VIDEO_ID"
+                  title="RoboTech Solutions Demo Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-2">
+                  Revolutionizing Industrial Automation
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  See how our collaborative robots streamline assembly lines, improve quality control, and optimize warehouse operations.
+                </p>
+                <Button className="gap-2">
+                  <Play className="h-4 w-4" /> Watch Full Demo
+                </Button>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
         </div>
       </div>
     </section>
