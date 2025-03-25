@@ -27,9 +27,7 @@ export default function Home() {
       <HowItWorksSection/>
       <FeaturesSection/>
       <FAQs/>  
-      {/* <Success/> */}
-      <Testimonials/>
-      <Team />
+    
       <Contact />
       <Footer/>
     </main>
