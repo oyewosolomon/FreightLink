@@ -27,7 +27,7 @@ const Footer = () => {
                 </ul>
             </div>
            
-            <div className="lg:mx-auto text-left ">
+            {/* <div className="lg:mx-auto text-left ">
                 <h4 className="text-lg text-gray-900 font-medium mb-7">Products</h4>
                 <ul className="text-sm  transition-all duration-500">
                     <li className="mb-6"><a href="javascript:;"  className="text-gray-600 hover:text-gray-900">Figma UI System</a></li>
@@ -35,7 +35,7 @@ const Footer = () => {
                     <li className="mb-6"><a href="javascript:;"  className=" text-gray-600 hover:text-gray-900">Responsive Blocks</a></li>
                     <li><a href="javascript:;"  className=" text-gray-600 hover:text-gray-900">Components Library</a></li>
                 </ul>
-            </div>
+            </div> */}
           
             <div className="lg:mx-auto text-left">
                 <h4 className="text-lg text-gray-900 font-medium mb-7">Resources</h4>

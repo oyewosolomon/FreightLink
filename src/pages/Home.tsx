@@ -26,8 +26,7 @@ export default function Home() {
       <WhyChooseUs/>
       <HowItWorksSection/>
       <FeaturesSection/>
-      <FAQs/>  
-    
+      <FAQs/>      
       <Contact />
       <Footer/>
     </main>
