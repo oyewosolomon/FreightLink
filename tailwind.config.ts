@@ -5,6 +5,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Raleway', 'sans-serif'], // Make Raleway the default
+        system: ['ui-sans-serif', 'system-ui', 'sans-serif'], // Fallback
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
